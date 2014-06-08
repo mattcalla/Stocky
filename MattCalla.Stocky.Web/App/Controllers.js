@@ -1,11 +1,11 @@
 ﻿var mainAppControllers = angular.module("mainAppControllers", []);
 
-mainAppControllers.controller("ListController", function ($scope, $http, Portfolio, portfolioFactory) {
+mainAppControllers.controller("ListController", function ($scope, $http, portfolioApi, portfolioFactory) {
 
-    $scope.positions = Portfolio.query();
+    $scope.positions = portfolioApi.query();
 
     $scope.add = function() {
-        Portfolio.add($scope.newPosition);
+        portfolioApi.add($scope.newPosition);
 
         $scope.positions.push($scope.newPosition);
 
@@ -19,6 +19,17 @@ mainAppControllers.controller("ListController", function ($scope, $http, Portfol
         var index = $scope.positions.indexOf(position);
         $scope.positions.splice(index, 1);
 
+    };
+
+});
+
+
+mainAppControllers.controller("AddPositionController", function ($scope, portfolioApi) {
+
+    $scope.add = function () {
+        portfolioApi.add($scope.newPosition);
+
+        $scope.newPosition = null;
     };
 
 });

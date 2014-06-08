@@ -1,6 +1,6 @@
 ﻿var mainAppServices = angular.module("mainAppServices", ["ngResource"]);
 
-mainAppServices.factory("Portfolio", [
+mainAppServices.factory("portfolioApi", [
     "$resource",
     function ($resource) {
         return $resource("/api/Portfolio", {}, {

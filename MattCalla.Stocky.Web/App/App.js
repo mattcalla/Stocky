@@ -12,6 +12,10 @@ mainApp.config(["$routeProvider",
                 templateUrl: "Partials/List.html",
                 controller: "ListController"
             }).
+            when("/addPosition", {
+                templateUrl: "Partials/AddPosition.html",
+                controller: "AddPositionController"
+            }).
             otherwise({
                 redirectTo: "/list"
             });
