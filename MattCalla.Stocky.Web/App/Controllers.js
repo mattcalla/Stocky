@@ -1,5 +1,11 @@
 ﻿var mainAppControllers = angular.module("mainAppControllers", []);
 
+function HeaderController($scope, $location) {
+    $scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
+}
+
 mainAppControllers.controller("ListController", function ($scope, $http, portfolioApi, portfolioFactory) {
 
     $scope.positions = portfolioApi.query();
