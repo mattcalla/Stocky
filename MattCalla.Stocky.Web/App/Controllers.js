@@ -1,6 +1,16 @@
 ﻿var mainAppControllers = angular.module("mainAppControllers", []);
 
 function HeaderController($scope, $location) {
+
+    $('.navbar-link').click(function () {
+
+        var navbarToggle = $('.navbar-toggle');
+        if (navbarToggle.is(':visible')) {
+            navbarToggle.trigger('click');
+        }
+    });
+
+
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
