@@ -1,0 +1,46 @@
+﻿
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Ideal Allocation %</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="position in positions">
+                    <td>{{position.symbol}}</td>
+                    <td>{{position.quantity}}</td>
+                    <td>{{position.currentPrice}}</td>
+                    <td>{{position.idealAllocation}}</td>
+                    <td><button data-ng-click="delete(position)" class="btn btn-danger">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter symbol" data-ng-model="newPosition.symbol">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Quantity" data-ng-model="newPosition.quantity">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Price" data-ng-model="newPosition.currentPrice">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ideal Allocation %" data-ng-model="newPosition.idealAllocation"/>
+            </div>
+            <button type="submit" class="btn btn-default" data-ng-click="add()">Add</button>
+        </form>
+    </div>
+</div>

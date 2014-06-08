@@ -1,0 +1,12 @@
+*.dll
+*/bin/Debug/*.*
+*/bin/Release/*.*
+*/obj/Debug/*
+*/obj/Release/*
+MattCalla.Stocky.v12.suo
+MattCalla.Stocky.Web/App_Data/*
+*/bin/*
+*/Properties/PublishProfiles/*
+*/Raven/CompiledIndexCache/*
+packages/*
+packages/*

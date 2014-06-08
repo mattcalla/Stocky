@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="mainApp">
+<head>
+    <title>Stocky</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.css" rel="stylesheet" />
+
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="../Scripts/angular-resource.js"></script>
+    <script src="../Scripts/angular-animate.js"></script>
+
+    <script src="../App/App.js"></script>
+    <script src="../App/Controllers.js"></script>
+    <script src="../App/Services.js"></script>
+
+</head>
+<body>
+
+    <div style="padding-left:40px; padding-top: 10px; padding-bottom: 10px">
+        <a href="#/List">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQGgJD2HFRrmfUcWEwJXLrGwqWUhzYg2sPZLYncUcmgX2dNIsH8" width="120" />
+        </a>
+    </div>
+    <div style="height: 10px; background-color: #5E5D5D; margin-bottom: 20px">
+
+    </div>
+    <div class="view-container">
+        <div data-ng-view class="container" class="view-frame"></div>
+    </div>
+
+
+</body>
+</html>
