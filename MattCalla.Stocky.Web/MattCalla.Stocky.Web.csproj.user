@@ -7,7 +7,7 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <ProjectView>ProjectFiles</ProjectView>
-    <NameOfLastUsedPublishProfile>stockyweb - FTP</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>stockyweb - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
