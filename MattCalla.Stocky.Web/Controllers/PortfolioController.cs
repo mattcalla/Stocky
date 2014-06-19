@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics;
 using System.Linq;
 using System.Web.Http;
 using MattCalla.Stocky.Core.Database;
@@ -17,9 +18,14 @@ namespace MattCalla.Stocky.Web.Controllers
         {
             using (var db = new DatabaseSession())
             {
-                return db.Query<Position>().OrderBy(p => p.Symbol);
+                var positions = db.Query<Position>().OrderBy(p => p.Symbol).ToList();
+
+                var portfolio = new Portfolio(positions);   //This calculates the asset allocation
+                return portfolio.Positions;
             }
         }
+
+
 
         [Route("api/Portfolio")]
         [HttpPost]

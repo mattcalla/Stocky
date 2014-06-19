@@ -7,7 +7,10 @@
                     <th>Symbol</th>
                     <th>Qty</th>
                     <th>Price</th>
-                    <th>Ideal Allocation %</th>
+                    <th>Ideal %</th>
+                    <th>Ideal Amount</th>
+                    <th>Actual %</th>
+                    <th>Actual Amount</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -16,7 +19,10 @@
                     <td>{{position.symbol}}</td>
                     <td>{{position.quantity}}</td>
                     <td>{{position.currentPrice}}</td>
-                    <td>{{position.idealAllocation}}</td>
+                    <td>{{position.idealAllocationPercentage}}</td>
+                    <td>{{position.idealAllocationAmount}}</td>
+                    <td>{{position.actualAllocationPercentage | number:2}}</td>
+                    <td>{{position.actualAllocationAmount}}</td>
                     <td><button data-ng-click="delete(position)" class="btn btn-danger">Delete</button></td>
                 </tr>
             </tbody>
